@@ -43,3 +43,37 @@ print (L)
 #数组中使用负数下标代表倒序索引？
 print (L[-1])
 print (L[-2])
+
+#在数组L中添加元素,
+# append()总是把新的元素添加到 list 的尾部。 
+# insert()方法，它接受两个参数，第一个参数是索引号，第二个参数是待添加的新元素
+L.append(20)
+L.insert(0,100)
+print (L)
+
+#在数组中删除元素,
+# pop()方法总是删除list最后位置的元素，并会打印删除的元素
+# pop(i)会删除下标是i的元素，并支持负数下标进行倒序索引
+M = ['Adam', 'Lisa', 'Paul', 'Bart']
+M.pop(2)
+M.pop(-3)
+M.pop()
+print (M)
+
+#数组中的替换，将数组中的首末两人互换位置（结合了之前的操作）
+N = ['Adam', 'Lisa', 'Bart']
+N.insert(0,N.pop())
+N.insert(1,N.pop())
+print (N)
+
+#Python之“可变”的tupletuple的每个元素，
+# 指向永远不变。即指向'a'，就不能改成指向'b'，
+# 指向一个list，就不能改成指向其他对象，但指向的这个list本身是可变的！
+t=('a','b',['A','B'])
+print (t)
+T=t[2]
+T[0] = 'X'
+T[1] = 'Y'
+print (t)
+t[2][0] = True
+print (t)
